@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - PaintContract</title>
+    <meta name="description" content="Terms of Service for PaintContract platform - Read our terms and conditions for using our marketplace connecting painters and construction workers with companies.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-teal: #14b8a6;
+            --primary-dark: #0d9488;
+            --accent-coral: #fb7185;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-gray: #f8fafc;
+            --white: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-gray);
+        }
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-teal);
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent-coral); }
+        .back-link {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: var(--primary-dark); }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-teal) 100%);
+            color: var(--white);
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .toc {
+            background: var(--bg-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+        .toc h2 {
+            color: var(--primary-teal);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+        }
+        .toc li {
+            counter-increment: toc-counter;
+            margin-bottom: 0.5rem;
+        }
+        .toc li::before {
+            content: counter(toc-counter) ". ";
+            color: var(--accent-coral);
+            font-weight: 600;
+        }
+        .toc a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toc a:hover {
+            color: var(--primary-teal);
+        }
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 80px;
+        }
+        .section h2 {
+            color: var(--primary-teal);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg-gray);
+        }
+        .section h3 {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+        }
+        .section p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        .section ul, .section ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        .highlight {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        .highlight strong {
+            color: var(--text-dark);
+        }
+        .contact-info {
+            background: var(--bg-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+        .contact-info h3 {
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            border-top: 1px solid #e5e7eb;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .content { padding: 1.5rem; }
+            nav { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Paint<span>Contract</span></a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Terms of Service</h1>
+        <p>Last Updated: January 8, 2026</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="toc">
+                <h2>Table of Contents</h2>
+                <ol>
+                    <li><a href="#acceptance">Acceptance of Terms</a></li>
+                    <li><a href="#description">Description of Service</a></li>
+                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#accounts">User Accounts and Registration</a></li>
+                    <li><a href="#user-types">User Types and Roles</a></li>
+                    <li><a href="#verification">Identity Verification and KYC</a></li>
+                    <li><a href="#prohibited">Prohibited Conduct</a></li>
+                    <li><a href="#payments">Payments and Fees</a></li>
+                    <li><a href="#escrow">Escrow and Milestone System</a></li>
+                    <li><a href="#disputes">Dispute Resolution</a></li>
+                    <li><a href="#intellectual-property">Intellectual Property Rights</a></li>
+                    <li><a href="#content">User Content and Portfolios</a></li>
+                    <li><a href="#termination">Termination and Suspension</a></li>
+                    <li><a href="#warranties">Disclaimers and Warranties</a></li>
+                    <li><a href="#liability">Limitation of Liability</a></li>
+                    <li><a href="#indemnification">Indemnification</a></li>
+                    <li><a href="#modifications">Modifications to Terms</a></li>
+                    <li><a href="#governing-law">Governing Law and Jurisdiction</a></li>
+                    <li><a href="#contact">Contact Information</a></li>
+                </ol>
+            </div>
+
+            <div id="acceptance" class="section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>Welcome to PaintContract. By accessing or using our platform, including our website, mobile applications (iOS and Android), and related services (collectively, the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Service.</p>
+                <p>These Terms constitute a legally binding agreement between you and PaintContract, Inc. ("PaintContract," "we," "us," or "our").</p>
+                <div class="highlight">
+                    <strong>Important:</strong> By creating an account or using our Service, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as our Privacy Policy.
+                </div>
+            </div>
+
+            <div id="description" class="section">
+                <h2>2. Description of Service</h2>
+                <p>PaintContract is a digital marketplace platform that connects professional painters and construction workers ("Workers") with companies and contractors seeking their services ("Companies"). Our Service includes:</p>
+                <ul>
+                    <li>Web-based platform accessible via modern web browsers</li>
+                    <li>Mobile applications for iOS and Android devices</li>
+                    <li>Project listing and matching system</li>
+                    <li>Portfolio and profile management tools</li>
+                    <li>Secure payment processing and escrow services</li>
+                    <li>Messaging and communication features</li>
+                    <li>Identity verification and KYC services</li>
+                    <li>Review and rating systems</li>
+                    <li>Dispute resolution assistance</li>
+                </ul>
+                <p>PaintContract acts as an intermediary platform and is not directly involved in the actual provision of painting or construction services between users.</p>
+            </div>
+
+            <div id="eligibility" class="section">
+                <h2>3. Eligibility</h2>
+                <p>To use PaintContract, you must:</p>
+                <ul>
+                    <li>Be at least 18 years of age (or the age of legal majority in your jurisdiction)</li>
+                    <li>Have the legal capacity to enter into binding contracts</li>
+                    <li>Not be prohibited from using the Service under any applicable laws</li>
+                    <li>Not have been previously suspended or removed from the platform</li>
+                    <li>Provide accurate and complete registration information</li>
+                </ul>
+                <h3>Additional Requirements for Workers:</h3>
+                <ul>
+                    <li>Possess valid professional licenses or certifications as required by local law</li>
+                    <li>Maintain appropriate insurance coverage for your services</li>
+                    <li>Have the legal right to work in your jurisdiction</li>
+                </ul>
+                <h3>Additional Requirements for Companies:</h3>
+                <ul>
+                    <li>Be a legally registered business entity or authorized representative thereof</li>
+                    <li>Have the authority to enter into contracts on behalf of your organization</li>
+                </ul>
+            </div>
+
+            <div id="accounts" class="section">
+                <h2>4. User Accounts and Registration</h2>
+                <h3>4.1 Account Creation</h3>
+                <p>To access most features of our Service, you must create an account. During registration, you agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information</li>
+                    <li>Maintain and promptly update your account information</li>
+                    <li>Keep your password secure and confidential</li>
+                    <li>Notify us immediately of any unauthorized account access</li>
+                    <li>Accept responsibility for all activities under your account</li>
+                </ul>
+
+                <h3>4.2 Account Security</h3>
+                <p>You are solely responsible for maintaining the confidentiality of your account credentials. PaintContract cannot and will not be liable for any loss or damage arising from your failure to comply with this security obligation.</p>
+
+                <h3>4.3 Multi-Platform Access</h3>
+                <p>Your account credentials can be used across our web platform and mobile applications. You acknowledge that your account activity may be synchronized across all platforms.</p>
+
+                <h3>4.4 Account Verification</h3>
+                <p>We may require you to verify your email address, phone number, or other contact information. Certain features may be restricted until verification is complete.</p>
+            </div>
+
+            <div id="user-types" class="section">
+                <h2>5. User Types and Roles</h2>
+                <h3>5.1 Worker Accounts</h3>
+                <p>Workers may:</p>
+                <ul>
+                    <li>Create and maintain professional portfolios</li>
+                    <li>Browse and apply for posted projects</li>
+                    <li>Set their rates and negotiate terms with Companies</li>
+                    <li>Receive payments for completed work through our platform</li>
+                    <li>Build reputation through reviews and ratings</li>
+                    <li>Access training and certification resources</li>
+                </ul>
+
+                <h3>5.2 Company Accounts</h3>
+                <p>Companies may:</p>
+                <ul>
+                    <li>Post project listings with detailed requirements</li>
+                    <li>Browse Worker portfolios and profiles</li>
+                    <li>Invite Workers to apply for projects</li>
+                    <li>Manage project milestones and payments</li>
+                    <li>Provide reviews and ratings for completed work</li>
+                    <li>Access analytics and project management tools</li>
+                </ul>
+
+                <h3>5.3 Dual Identity</h3>
+                <p>Users may maintain both Worker and Company accounts, but each identity must be separately verified and maintained in accordance with these Terms.</p>
+            </div>
+
+            <div id="verification" class="section">
+                <h2>6. Identity Verification and KYC</h2>
+                <h3>6.1 Verification Requirements</h3>
+                <p>To ensure platform safety and compliance with legal requirements, all users must complete identity verification (Know Your Customer - KYC) including:</p>
+                <ul>
+                    <li><strong>Document Verification:</strong> Government-issued ID, business registration documents, tax identification</li>
+                    <li><strong>Video Verification:</strong> Live video verification to confirm identity</li>
+                    <li><strong>Address Verification:</strong> Proof of residential or business address</li>
+                    <li><strong>License Verification:</strong> Professional licenses and certifications (for Workers)</li>
+                </ul>
+
+                <h3>6.2 Mobile-Native KYC</h3>
+                <p>Verification is primarily conducted through our mobile applications, which provide secure document scanning and video verification features.</p>
+
+                <h3>6.3 Verification Levels</h3>
+                <p>Users may achieve different verification levels, which unlock additional platform features:</p>
+                <ul>
+                    <li><strong>Basic:</strong> Email and phone verification</li>
+                    <li><strong>Standard:</strong> Identity document verification</li>
+                    <li><strong>Enhanced:</strong> Video verification and professional credentials</li>
+                    <li><strong>Premium:</strong> Full background check and insurance verification</li>
+                </ul>
+
+                <h3>6.4 Trust Scoring</h3>
+                <p>We maintain a trust scoring system based on verification level, transaction history, reviews, and platform behavior. Your trust score may affect your visibility and access to certain features.</p>
+
+                <h3>6.5 Failure to Verify</h3>
+                <p>Accounts that fail to complete required verification within specified timeframes may have limited functionality or be suspended.</p>
+            </div>
+
+            <div id="prohibited" class="section">
+                <h2>7. Prohibited Conduct</h2>
+                <p>When using our Service, you agree NOT to:</p>
+                <ul>
+                    <li>Provide false, misleading, or inaccurate information</li>
+                    <li>Impersonate any person or entity or misrepresent your affiliation</li>
+                    <li>Engage in fraudulent, deceptive, or illegal activities</li>
+                    <li>Circumvent our payment system or attempt to avoid fees</li>
+                    <li>Harass, threaten, or abuse other users</li>
+                    <li>Post discriminatory content or engage in discriminatory practices</li>
+                    <li>Violate any applicable laws, regulations, or third-party rights</li>
+                    <li>Use automated systems (bots, scrapers) without our written permission</li>
+                    <li>Attempt to gain unauthorized access to our systems</li>
+                    <li>Interfere with or disrupt the Service or servers</li>
+                    <li>Transmit viruses, malware, or other harmful code</li>
+                    <li>Collect user information for purposes other than platform transactions</li>
+                    <li>Share your account credentials with others</li>
+                    <li>Create multiple accounts to manipulate the platform</li>
+                    <li>Solicit business outside the platform to avoid fees</li>
+                </ul>
+                <div class="highlight">
+                    <strong>Zero Tolerance:</strong> Violations of these prohibitions may result in immediate account suspension or termination, forfeiture of funds in escrow, and potential legal action.
+                </div>
+            </div>
+
+            <div id="payments" class="section">
+                <h2>8. Payments and Fees</h2>
+                <h3>8.1 Payment Methods</h3>
+                <p>PaintContract supports multiple payment methods including:</p>
+                <ul>
+                    <li>Credit and debit cards (Visa, Mastercard, American Express)</li>
+                    <li>Bank transfers and ACH payments</li>
+                    <li>Digital wallets (where available)</li>
+                    <li>Cryptocurrency payments (Bitcoin, Ethereum, and others)</li>
+                </ul>
+
+                <h3>8.2 Platform Fees</h3>
+                <p>PaintContract charges fees for use of the platform:</p>
+                <ul>
+                    <li><strong>Worker Service Fee:</strong> Percentage of project value charged to Workers upon payment receipt</li>
+                    <li><strong>Company Service Fee:</strong> Percentage of project value charged to Companies when posting projects or hiring Workers</li>
+                    <li><strong>Payment Processing Fees:</strong> Third-party payment processor fees (if applicable)</li>
+                    <li><strong>Cryptocurrency Transaction Fees:</strong> Network fees for crypto payments</li>
+                </ul>
+                <p>Current fee schedules are available in your account dashboard and may vary based on verification level, transaction volume, and user status.</p>
+
+                <h3>8.3 Fee Changes</h3>
+                <p>We reserve the right to modify our fee structure with 30 days' advance notice. Continued use of the Service after fee changes constitutes acceptance of the new fees.</p>
+
+                <h3>8.4 Taxes</h3>
+                <p>You are responsible for determining and paying all applicable taxes associated with your use of the Service. PaintContract may collect and remit taxes where required by law.</p>
+
+                <h3>8.5 Currency</h3>
+                <p>Transactions are processed in US Dollars (USD) or local currency where supported. Cryptocurrency transactions are subject to exchange rate fluctuations.</p>
+            </div>
+
+            <div id="escrow" class="section">
+                <h2>9. Escrow and Milestone System</h2>
+                <h3>9.1 Escrow Protection</h3>
+                <p>PaintContract operates a milestone-based escrow system to protect both Workers and Companies:</p>
+                <ul>
+                    <li>Companies deposit funds into escrow before work begins</li>
+                    <li>Funds are held securely until milestones are completed and approved</li>
+                    <li>Workers receive automatic payment upon milestone approval</li>
+                    <li>Disputed amounts remain in escrow pending resolution</li>
+                </ul>
+
+                <h3>9.2 Milestone Structure</h3>
+                <p>Projects must be divided into clearly defined milestones with:</p>
+                <ul>
+                    <li>Specific deliverables and completion criteria</li>
+                    <li>Allocated payment amounts</li>
+                    <li>Estimated completion dates</li>
+                    <li>Supporting documentation or evidence requirements</li>
+                </ul>
+
+                <h3>9.3 Milestone Approval</h3>
+                <p>Companies have 7 days to review and approve completed milestones. If no action is taken within this period, the milestone may be automatically approved, and payment released.</p>
+
+                <h3>9.4 Refunds and Returns</h3>
+                <p>Refund policies vary by project and agreement terms. Disputed refunds are handled through our dispute resolution process.</p>
+
+                <h3>9.5 Escrow Holds</h3>
+                <p>We may place holds on escrow funds in cases of:</p>
+                <ul>
+                    <li>Suspected fraud or terms violations</li>
+                    <li>Chargebacks or payment disputes</li>
+                    <li>Legal holds or court orders</li>
+                    <li>Investigation of prohibited conduct</li>
+                </ul>
+            </div>
+
+            <div id="disputes" class="section">
+                <h2>10. Dispute Resolution</h2>
+                <h3>10.1 Informal Resolution</h3>
+                <p>We encourage users to first attempt to resolve disputes directly through our platform messaging system.</p>
+
+                <h3>10.2 Formal Dispute Process</h3>
+                <p>If informal resolution fails, either party may initiate formal dispute resolution through our platform. We provide mediation assistance to help parties reach mutual agreement.</p>
+
+                <h3>10.3 Arbitration Agreement</h3>
+                <p>For disputes exceeding $10,000 USD or involving significant disagreements, both parties agree to binding arbitration in accordance with the rules of the American Arbitration Association. Arbitration takes place in [Jurisdiction] and is conducted in English.</p>
+
+                <h3>10.4 Class Action Waiver</h3>
+                <p>You agree to bring claims against PaintContract only in your individual capacity and not as part of any class or representative action.</p>
+
+                <h3>10.5 Small Claims Court</h3>
+                <p>Either party may bring an individual action in small claims court as an alternative to arbitration for qualifying claims.</p>
+            </div>
+
+            <div id="intellectual-property" class="section">
+                <h2>11. Intellectual Property Rights</h2>
+                <h3>11.1 PaintContract IP</h3>
+                <p>The Service, including all content, features, functionality, software, designs, text, graphics, logos, and trademarks, is owned by PaintContract and protected by intellectual property laws.</p>
+
+                <h3>11.2 Limited License</h3>
+                <p>We grant you a limited, non-exclusive, non-transferable license to access and use the Service for its intended purpose. This license does not include:</p>
+                <ul>
+                    <li>Resale or commercial use of the Service</li>
+                    <li>Collection and use of product listings or user information</li>
+                    <li>Derivative use of the Service or its contents</li>
+                    <li>Downloading or copying account information for others</li>
+                    <li>Use of data mining, robots, or similar data gathering tools</li>
+                </ul>
+
+                <h3>11.3 Trademarks</h3>
+                <p>PaintContract, our logo, and related marks are trademarks of PaintContract, Inc. You may not use our trademarks without our prior written permission.</p>
+
+                <h3>11.4 Copyright Infringement</h3>
+                <p>We respect intellectual property rights and expect users to do the same. If you believe content on our platform infringes your copyright, please contact us with a detailed notice pursuant to the Digital Millennium Copyright Act (DMCA).</p>
+            </div>
+
+            <div id="content" class="section">
+                <h2>12. User Content and Portfolios</h2>
+                <h3>12.1 Content Ownership</h3>
+                <p>You retain ownership of content you upload to PaintContract, including portfolio images, project descriptions, and communications.</p>
+
+                <h3>12.2 Content License to PaintContract</h3>
+                <p>By uploading content, you grant PaintContract a worldwide, non-exclusive, royalty-free license to use, display, reproduce, and distribute your content for purposes of:</p>
+                <ul>
+                    <li>Operating and improving the Service</li>
+                    <li>Matching you with potential clients or Workers</li>
+                    <li>Marketing and promoting the Service</li>
+                    <li>Displaying your portfolio to other users</li>
+                </ul>
+
+                <h3>12.3 Content Representations</h3>
+                <p>By uploading content, you represent and warrant that:</p>
+                <ul>
+                    <li>You own or have necessary rights to the content</li>
+                    <li>Content does not violate any third-party rights</li>
+                    <li>Content is accurate and not misleading</li>
+                    <li>Content complies with applicable laws and these Terms</li>
+                </ul>
+
+                <h3>12.4 Portfolio Images</h3>
+                <p>Workers must have appropriate rights to display project images in their portfolios. This may require client consent for commercial properties or recognizable private properties.</p>
+
+                <h3>12.5 Content Moderation</h3>
+                <p>We reserve the right to review, edit, or remove any content that violates these Terms or is otherwise objectionable, without notice.</p>
+
+                <h3>12.6 Prohibited Content</h3>
+                <p>Do not upload content that is:</p>
+                <ul>
+                    <li>Illegal, harmful, threatening, or harassing</li>
+                    <li>Defamatory, obscene, or pornographic</li>
+                    <li>Infringing on intellectual property rights</li>
+                    <li>Contains personal information of others without consent</li>
+                    <li>Contains viruses or malicious code</li>
+                    <li>Spam or unsolicited advertising</li>
+                </ul>
+            </div>
+
+            <div id="termination" class="section">
+                <h2>13. Termination and Suspension</h2>
+                <h3>13.1 Termination by You</h3>
+                <p>You may terminate your account at any time by following the account closure process in your settings. Upon termination:</p>
+                <ul>
+                    <li>You must complete all ongoing projects or resolve them through our dispute process</li>
+                    <li>Outstanding payments will be processed according to existing agreements</li>
+                    <li>Your public profile and portfolio will be removed</li>
+                    <li>You forfeit access to your account history after 90 days</li>
+                </ul>
+
+                <h3>13.2 Termination by PaintContract</h3>
+                <p>We may suspend or terminate your account immediately, without prior notice or liability, for any reason including:</p>
+                <ul>
+                    <li>Breach of these Terms</li>
+                    <li>Fraudulent or illegal activity</li>
+                    <li>Violation of laws or regulations</li>
+                    <li>Risk to other users or platform integrity</li>
+                    <li>Repeated complaints or negative behavior</li>
+                    <li>Failure to complete verification</li>
+                </ul>
+
+                <h3>13.3 Effect of Termination</h3>
+                <p>Upon termination of your account:</p>
+                <ul>
+                    <li>Your right to use the Service immediately ceases</li>
+                    <li>We may delete your data in accordance with our retention policies</li>
+                    <li>Sections of these Terms that by their nature should survive termination remain in effect</li>
+                    <li>Outstanding financial obligations remain enforceable</li>
+                </ul>
+
+                <h3>13.4 Appeals</h3>
+                <p>If your account is terminated, you may appeal the decision by contacting our support team within 30 days.</p>
+            </div>
+
+            <div id="warranties" class="section">
+                <h2>14. Disclaimers and Warranties</h2>
+                <h3>14.1 Service "AS IS"</h3>
+                <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
+                <ul>
+                    <li>Warranties of merchantability, fitness for a particular purpose, or non-infringement</li>
+                    <li>Warranties regarding accuracy, reliability, or availability of the Service</li>
+                    <li>Warranties that the Service will be uninterrupted, secure, or error-free</li>
+                    <li>Warranties regarding the quality of services obtained through the platform</li>
+                </ul>
+
+                <h3>14.2 Platform Role</h3>
+                <p>PaintContract is a marketplace platform and is not a party to agreements between Workers and Companies. We do not:</p>
+                <ul>
+                    <li>Employ or directly control Workers</li>
+                    <li>Guarantee the quality, safety, or legality of services provided</li>
+                    <li>Verify all information provided by users (beyond KYC requirements)</li>
+                    <li>Guarantee that Workers or Companies will fulfill their obligations</li>
+                </ul>
+
+                <h3>14.3 User Responsibility</h3>
+                <p>You acknowledge that you are solely responsible for:</p>
+                <ul>
+                    <li>Evaluating the suitability of Workers or Companies</li>
+                    <li>Verifying credentials, insurance, and licensing</li>
+                    <li>Ensuring compliance with applicable laws</li>
+                    <li>The quality and timeliness of work performed or received</li>
+                </ul>
+
+                <h3>14.4 Third-Party Services</h3>
+                <p>The Service may integrate with third-party services (payment processors, mapping services, etc.). We are not responsible for these third-party services or their practices.</p>
+            </div>
+
+            <div id="liability" class="section">
+                <h2>15. Limitation of Liability</h2>
+                <h3>15.1 Limitation of Damages</h3>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, PAINTCONTRACT AND ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR:</p>
+                <ul>
+                    <li>Indirect, incidental, special, consequential, or punitive damages</li>
+                    <li>Loss of profits, revenue, data, or business opportunities</li>
+                    <li>Cost of substitute goods or services</li>
+                    <li>Damages arising from use or inability to use the Service</li>
+                    <li>Damages related to interactions with other users</li>
+                    <li>Damages from unauthorized access to your account or data</li>
+                    <li>Damages from errors, viruses, or other harmful components</li>
+                </ul>
+
+                <h3>15.2 Maximum Liability</h3>
+                <p>Our total liability to you for all claims arising from or related to the Service shall not exceed the greater of:</p>
+                <ul>
+                    <li>The amount of fees you paid to us in the 12 months before the claim arose, or</li>
+                    <li>$100 USD</li>
+                </ul>
+
+                <h3>15.3 Essential Purpose</h3>
+                <p>These limitations apply even if PaintContract has been advised of the possibility of such damages and even if a remedy fails of its essential purpose.</p>
+
+                <h3>15.4 Jurisdictional Variations</h3>
+                <p>Some jurisdictions do not allow certain limitations of liability. In such jurisdictions, our liability is limited to the maximum extent permitted by law.</p>
+            </div>
+
+            <div id="indemnification" class="section">
+                <h2>16. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless PaintContract, its affiliates, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:</p>
+                <ul>
+                    <li>Your use or misuse of the Service</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any rights of another party</li>
+                    <li>Your violation of any applicable laws or regulations</li>
+                    <li>Your content or information posted on the Service</li>
+                    <li>Services you provide or receive through the platform</li>
+                    <li>Any disputes with other users</li>
+                </ul>
+                <p>This indemnification obligation survives termination of your account and your use of the Service.</p>
+            </div>
+
+            <div id="modifications" class="section">
+                <h2>17. Modifications to Terms</h2>
+                <h3>17.1 Right to Modify</h3>
+                <p>We reserve the right to modify these Terms at any time. When we make changes, we will:</p>
+                <ul>
+                    <li>Update the "Last Updated" date at the top of this page</li>
+                    <li>Provide notice of material changes through email or platform notification</li>
+                    <li>Require acceptance of updated Terms for continued use (where applicable)</li>
+                </ul>
+
+                <h3>17.2 Effective Date</h3>
+                <p>Changes to these Terms become effective:</p>
+                <ul>
+                    <li>30 days after notice for material changes affecting fees or dispute resolution</li>
+                    <li>Immediately upon posting for non-material changes or security-related updates</li>
+                </ul>
+
+                <h3>17.3 Continued Use</h3>
+                <p>Your continued use of the Service after changes become effective constitutes acceptance of the revised Terms. If you do not agree to the changes, you must stop using the Service.</p>
+
+                <h3>17.4 Version History</h3>
+                <p>Previous versions of these Terms are available upon request for your reference.</p>
+            </div>
+
+            <div id="governing-law" class="section">
+                <h2>18. Governing Law and Jurisdiction</h2>
+                <h3>18.1 Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.</p>
+
+                <h3>18.2 Jurisdiction</h3>
+                <p>Subject to the arbitration provisions in Section 10, any legal action or proceeding arising under these Terms shall be brought exclusively in the federal or state courts located in Delaware, and the parties irrevocably consent to personal jurisdiction and venue therein.</p>
+
+                <h3>18.3 International Users</h3>
+                <p>If you access the Service from outside the United States, you are responsible for compliance with local laws. By using the Service, you consent to the transfer of your data to the United States.</p>
+
+                <h3>18.4 Language</h3>
+                <p>These Terms are drafted in English. Any translations are provided for convenience only. In case of conflict between the English version and a translation, the English version prevails.</p>
+            </div>
+
+            <div id="contact" class="section">
+                <h2>19. Contact Information</h2>
+                <div class="contact-info">
+                    <h3>PaintContract, Inc.</h3>
+                    <p><strong>Email:</strong> legal@paintcontract.com</p>
+                    <p><strong>Support:</strong> support@paintcontract.com</p>
+                    <p><strong>Address:</strong><br>
+                    PaintContract, Inc.<br>
+                    [Street Address]<br>
+                    [City, State ZIP]<br>
+                    United States</p>
+                    
+                    <p style="margin-top: 1.5rem;"><strong>For DMCA Notices:</strong> dmca@paintcontract.com</p>
+                    <p><strong>For Privacy Inquiries:</strong> privacy@paintcontract.com</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Additional Information</h2>
+                <p><strong>Entire Agreement:</strong> These Terms, together with our Privacy Policy, constitute the entire agreement between you and PaintContract regarding use of the Service.</p>
+                <p><strong>Severability:</strong> If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+                <p><strong>No Waiver:</strong> Our failure to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision.</p>
+                <p><strong>Assignment:</strong> You may not assign these Terms without our prior written consent. We may assign these Terms without restriction.</p>
+                <p><strong>Force Majeure:</strong> PaintContract shall not be liable for any failure to perform due to circumstances beyond our reasonable control.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PaintContract, Inc. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="privacy.html" style="color: var(--primary-teal); text-decoration: none;">Privacy Policy</a> | 
+            <a href="terms.html" style="color: var(--primary-teal); text-decoration: none;">Terms of Service</a> | 
+            <a href="index.html" style="color: var(--primary-teal); text-decoration: none;">Home</a>
+        </p>
+    </footer>
+</body>
+</html>
