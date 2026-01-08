@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PaintContract</title>
+    <meta name="description" content="Privacy Policy for PaintContract - Learn how we collect, use, and protect your personal information on our platform.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-teal: #14b8a6;
+            --primary-dark: #0d9488;
+            --accent-coral: #fb7185;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-gray: #f8fafc;
+            --white: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-gray);
+        }
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-teal);
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent-coral); }
+        .back-link {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: var(--primary-dark); }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-teal) 100%);
+            color: var(--white);
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .toc {
+            background: var(--bg-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+        .toc h2 {
+            color: var(--primary-teal);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+        }
+        .toc li {
+            counter-increment: toc-counter;
+            margin-bottom: 0.5rem;
+        }
+        .toc li::before {
+            content: counter(toc-counter) ". ";
+            color: var(--accent-coral);
+            font-weight: 600;
+        }
+        .toc a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toc a:hover {
+            color: var(--primary-teal);
+        }
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 80px;
+        }
+        .section h2 {
+            color: var(--primary-teal);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg-gray);
+        }
+        .section h3 {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+        }
+        .section p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        .section ul, .section ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        .highlight {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        .highlight strong {
+            color: var(--text-dark);
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .data-table th {
+            background: var(--bg-gray);
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        .data-table td {
+            color: var(--text-light);
+        }
+        .contact-info {
+            background: var(--bg-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+        .contact-info h3 {
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            border-top: 1px solid #e5e7eb;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .content { padding: 1.5rem; }
+            nav { flex-direction: column; gap: 1rem; }
+            .data-table { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Paint<span>Contract</span></a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Privacy Policy</h1>
+        <p>Last Updated: January 8, 2026</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="toc">
+                <h2>Table of Contents</h2>
+                <ol>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#information-collected">Information We Collect</a></li>
+                    <li><a href="#how-we-use">How We Use Your Information</a></li>
+                    <li><a href="#sharing">Information Sharing and Disclosure</a></li>
+                    <li><a href="#data-retention">Data Retention</a></li>
+                    <li><a href="#security">Data Security</a></li>
+                    <li><a href="#your-rights">Your Privacy Rights</a></li>
+                    <li><a href="#cookies">Cookies and Tracking Technologies</a></li>
+                    <li><a href="#mobile-apps">Mobile Applications</a></li>
+                    <li><a href="#international">International Data Transfers</a></li>
+                    <li><a href="#children">Children's Privacy</a></li>
+                    <li><a href="#california">California Privacy Rights (CCPA)</a></li>
+                    <li><a href="#gdpr">European Privacy Rights (GDPR)</a></li>
+                    <li><a href="#changes">Changes to This Policy</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ol>
+            </div>
+
+            <div id="introduction" class="section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to PaintContract. This Privacy Policy explains how PaintContract, Inc. ("we," "us," or "our") collects, uses, discloses, and protects your personal information when you use our platform, including our website and mobile applications (iOS and Android).</p>
+                <p>We are committed to protecting your privacy and handling your data in an open and transparent manner. This policy complies with applicable data protection laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
+                <div class="highlight">
+                    <strong>Important:</strong> By using our Service, you consent to the collection and use of information in accordance with this Privacy Policy. If you do not agree with this policy, please do not use our Service.
+                </div>
+            </div>
+
+            <div id="information-collected" class="section">
+                <h2>2. Information We Collect</h2>
+                <h3>2.1 Information You Provide Directly</h3>
+                <p>We collect information that you voluntarily provide when using our Service:</p>
+                
+                <h4>Account Information:</h4>
+                <ul>
+                    <li>Name, email address, phone number</li>
+                    <li>Username and password</li>
+                    <li>Profile photo</li>
+                    <li>Business information (for Company accounts)</li>
+                    <li>Professional credentials and certifications</li>
+                </ul>
+
+                <h4>Verification Information (KYC):</h4>
+                <ul>
+                    <li>Government-issued ID (driver's license, passport)</li>
+                    <li>Social Security Number or Tax ID</li>
+                    <li>Proof of address documents</li>
+                    <li>Video verification recordings</li>
+                    <li>Professional licenses and insurance certificates</li>
+                    <li>Background check authorizations</li>
+                </ul>
+
+                <h4>Portfolio and Project Information:</h4>
+                <ul>
+                    <li>Work samples, photos, and descriptions</li>
+                    <li>Project listings and proposals</li>
+                    <li>Skills, experience, and specializations</li>
+                    <li>Reviews and ratings</li>
+                </ul>
+
+                <h4>Financial Information:</h4>
+                <ul>
+                    <li>Payment method details (credit/debit card, bank account)</li>
+                    <li>Cryptocurrency wallet addresses</li>
+                    <li>Transaction history</li>
+                    <li>Tax documentation (W-9, W-8BEN, etc.)</li>
+                </ul>
+
+                <h4>Communications:</h4>
+                <ul>
+                    <li>Messages sent through our platform</li>
+                    <li>Support inquiries and correspondence</li>
+                    <li>Feedback and survey responses</li>
+                </ul>
+
+                <h3>2.2 Information Collected Automatically</h3>
+                
+                <h4>Device and Usage Information:</h4>
+                <ul>
+                    <li>IP address and geolocation data</li>
+                    <li>Device type, operating system, browser type</li>
+                    <li>Unique device identifiers (UDID, advertising ID)</li>
+                    <li>Pages visited, features used, time spent on platform</li>
+                    <li>Referral sources and search queries</li>
+                    <li>App performance and crash data</li>
+                </ul>
+
+                <h4>Mobile App Permissions:</h4>
+                <ul>
+                    <li><strong>Camera:</strong> For uploading portfolio images and video verification</li>
+                    <li><strong>Photo Library:</strong> For selecting and uploading images</li>
+                    <li><strong>Location:</strong> For finding nearby projects and Workers (optional)</li>
+                    <li><strong>Notifications:</strong> For alerts about messages, milestones, and updates</li>
+                    <li><strong>Microphone:</strong> For video verification</li>
+                    <li><strong>Storage:</strong> For caching data and offline functionality</li>
+                </ul>
+
+                <h4>Cookies and Tracking Technologies:</h4>
+                <ul>
+                    <li>Session cookies for authentication</li>
+                    <li>Persistent cookies for preferences</li>
+                    <li>Analytics cookies (Google Analytics, Mixpanel)</li>
+                    <li>Advertising cookies (where applicable)</li>
+                </ul>
+
+                <h3>2.3 Information from Third Parties</h3>
+                <ul>
+                    <li>Social media profile information (if you connect accounts)</li>
+                    <li>Identity verification data from KYC providers</li>
+                    <li>Payment processing information from Stripe, NOWPayments</li>
+                    <li>Background check results from screening services</li>
+                    <li>Professional license verification data</li>
+                    <li>Public records and databases</li>
+                </ul>
+            </div>
+
+            <div id="how-we-use" class="section">
+                <h2>3. How We Use Your Information</h2>
+                <p>We use your information for the following purposes:</p>
+
+                <h3>3.1 Providing and Improving Services</h3>
+                <ul>
+                    <li>Creating and managing your account</li>
+                    <li>Facilitating connections between Workers and Companies</li>
+                    <li>Processing payments and escrow transactions</li>
+                    <li>Displaying portfolios and project listings</li>
+                    <li>Enabling messaging and communication</li>
+                    <li>Providing customer support</li>
+                    <li>Improving platform features and user experience</li>
+                    <li>Conducting research and analytics</li>
+                </ul>
+
+                <h3>3.2 Safety and Security</h3>
+                <ul>
+                    <li>Verifying identities and preventing fraud</li>
+                    <li>Detecting and preventing prohibited activities</li>
+                    <li>Enforcing our Terms of Service</li>
+                    <li>Protecting against security threats</li>
+                    <li>Conducting risk assessments</li>
+                    <li>Maintaining trust scores</li>
+                </ul>
+
+                <h3>3.3 Legal and Compliance</h3>
+                <ul>
+                    <li>Complying with legal obligations (KYC/AML, tax reporting)</li>
+                    <li>Responding to legal requests and court orders</li>
+                    <li>Protecting our legal rights</li>
+                    <li>Resolving disputes</li>
+                </ul>
+
+                <h3>3.4 Marketing and Communications</h3>
+                <ul>
+                    <li>Sending transactional emails (confirmations, receipts)</li>
+                    <li>Providing platform updates and notifications</li>
+                    <li>Sending marketing communications (with consent)</li>
+                    <li>Conducting surveys and requesting feedback</li>
+                </ul>
+
+                <h3>3.5 Business Operations</h3>
+                <ul>
+                    <li>Processing business transactions and partnerships</li>
+                    <li>Preparing financial reports and audits</li>
+                    <li>Managing corporate transactions (mergers, acquisitions)</li>
+                </ul>
+            </div>
+
+            <div id="sharing" class="section">
+                <h2>4. Information Sharing and Disclosure</h2>
+                <p>We share your information in the following circumstances:</p>
+
+                <h3>4.1 With Other Users</h3>
+                <ul>
+                    <li><strong>Public Profile Information:</strong> Name, photo, portfolio, ratings, and reviews are visible to all users</li>
+                    <li><strong>Project Information:</strong> Companies see Worker profiles when matching; Workers see Company profiles when applying</li>
+                    <li><strong>Transaction Details:</strong> Both parties see project details, milestones, and payment information</li>
+                    <li><strong>Messages:</strong> Communications between parties are private but stored on our servers</li>
+                </ul>
+
+                <h3>4.2 Service Providers and Partners</h3>
+                <p>We share information with trusted third-party service providers who help us operate our platform:</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Service Provider</th>
+                            <th>Purpose</th>
+                            <th>Data Shared</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Supabase</td>
+                            <td>Database hosting and authentication</td>
+                            <td>All account and platform data</td>
+                        </tr>
+                        <tr>
+                            <td>Stripe</td>
+                            <td>Payment processing</td>
+                            <td>Payment information, transaction details</td>
+                        </tr>
+                        <tr>
+                            <td>NOWPayments</td>
+                            <td>Cryptocurrency payments</td>
+                            <td>Wallet addresses, transaction amounts</td>
+                        </tr>
+                        <tr>
+                            <td>Resend</td>
+                            <td>Email delivery</td>
+                            <td>Email addresses, message content</td>
+                        </tr>
+                        <tr>
+                            <td>Google Analytics</td>
+                            <td>Usage analytics</td>
+                            <td>Anonymized usage data, device info</td>
+                        </tr>
+                        <tr>
+                            <td>KYC Providers</td>
+                            <td>Identity verification</td>
+                            <td>ID documents, verification data</td>
+                        </tr>
+                        <tr>
+                            <td>AWS/Cloud Providers</td>
+                            <td>Infrastructure and storage</td>
+                            <td>All platform data (encrypted)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4.3 Legal Requirements</h3>
+                <p>We may disclose your information when required by law or to:</p>
+                <ul>
+                    <li>Comply with legal process (subpoenas, warrants)</li>
+                    <li>Enforce our Terms of Service</li>
+                    <li>Protect our rights, property, or safety</li>
+                    <li>Protect the rights, property, or safety of others</li>
+                    <li>Prevent fraud or security threats</li>
+                    <li>Cooperate with law enforcement</li>
+                </ul>
+
+                <h3>4.4 Business Transfers</h3>
+                <p>If PaintContract is involved in a merger, acquisition, bankruptcy, or sale of assets, your information may be transferred as part of that transaction. We will provide notice before your information becomes subject to a different privacy policy.</p>
+
+                <h3>4.5 With Your Consent</h3>
+                <p>We may share your information for other purposes with your explicit consent.</p>
+            </div>
+
+            <div id="data-retention" class="section">
+                <h2>5. Data Retention</h2>
+                <p>We retain your information for as long as necessary to:</p>
+                <ul>
+                    <li>Provide our services to you</li>
+                    <li>Comply with legal obligations (typically 7 years for financial records)</li>
+                    <li>Resolve disputes and enforce agreements</li>
+                    <li>Maintain security and prevent fraud</li>
+                </ul>
+
+                <h3>Retention Periods:</h3>
+                <ul>
+                    <li><strong>Account Information:</strong> Duration of account plus 90 days after closure</li>
+                    <li><strong>Transaction Records:</strong> 7 years for tax and legal compliance</li>
+                    <li><strong>KYC Documents:</strong> 5 years after account closure</li>
+                    <li><strong>Messages:</strong> 2 years or until account deletion</li>
+                    <li><strong>Analytics Data:</strong> 26 months (Google Analytics default)</li>
+                    <li><strong>Backup Data:</strong> 30-90 days in encrypted backups</li>
+                </ul>
+
+                <p>After retention periods expire, we securely delete or anonymize your information.</p>
+            </div>
+
+            <div id="security" class="section">
+                <h2>6. Data Security</h2>
+                <p>We implement industry-standard security measures to protect your information:</p>
+
+                <h3>Technical Safeguards:</h3>
+                <ul>
+                    <li><strong>Encryption:</strong> All data in transit uses TLS 1.3; data at rest is AES-256 encrypted</li>
+                    <li><strong>Secure Authentication:</strong> Password hashing with bcrypt, optional two-factor authentication</li>
+                    <li><strong>Access Controls:</strong> Role-based access, principle of least privilege</li>
+                    <li><strong>Network Security:</strong> Firewalls, intrusion detection, DDoS protection</li>
+                    <li><strong>Secure Development:</strong> Code reviews, security testing, vulnerability scanning</li>
+                </ul>
+
+                <h3>Organizational Safeguards:</h3>
+                <ul>
+                    <li>Employee training on data protection</li>
+                    <li>Confidentiality agreements with staff and contractors</li>
+                    <li>Regular security audits and assessments</li>
+                    <li>Incident response procedures</li>
+                    <li>Data breach notification protocols</li>
+                </ul>
+
+                <h3>Physical Safeguards:</h3>
+                <ul>
+                    <li>Secure data center facilities (SOC 2 certified)</li>
+                    <li>Redundant infrastructure and backups</li>
+                    <li>Disaster recovery plans</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>Security Note:</strong> While we use reasonable security measures, no method of transmission or storage is 100% secure. You are responsible for maintaining the confidentiality of your account credentials.
+                </div>
+            </div>
+
+            <div id="your-rights" class="section">
+                <h2>7. Your Privacy Rights</h2>
+                <p>You have the following rights regarding your personal information:</p>
+
+                <h3>7.1 Access and Portability</h3>
+                <ul>
+                    <li><strong>Access:</strong> Request a copy of your personal information</li>
+                    <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li>
+                    <li><strong>Download:</strong> Export your profile, portfolio, and transaction history</li>
+                </ul>
+
+                <h3>7.2 Correction and Update</h3>
+                <ul>
+                    <li>Update your account information through your profile settings</li>
+                    <li>Correct inaccurate or incomplete information</li>
+                    <li>Request verification data updates (may require re-verification)</li>
+                </ul>
+
+                <h3>7.3 Deletion and Erasure</h3>
+                <ul>
+                    <li><strong>Account Deletion:</strong> Close your account and request data deletion</li>
+                    <li><strong>Right to be Forgotten:</strong> Request erasure of personal data (subject to legal retention requirements)</li>
+                    <li><strong>Exceptions:</strong> We may retain data for legal compliance, fraud prevention, or dispute resolution</li>
+                </ul>
+
+                <h3>7.4 Restriction and Objection</h3>
+                <ul>
+                    <li><strong>Restrict Processing:</strong> Limit how we use your data in certain circumstances</li>
+                    <li><strong>Object to Processing:</strong> Object to processing based on legitimate interests</li>
+                    <li><strong>Opt-Out:</strong> Unsubscribe from marketing communications (transactional emails continue)</li>
+                </ul>
+
+                <h3>7.5 Withdraw Consent</h3>
+                <p>Where we process data based on consent, you may withdraw consent at any time. This does not affect the lawfulness of processing before withdrawal.</p>
+
+                <h3>7.6 Exercising Your Rights</h3>
+                <p>To exercise these rights, contact us at privacy@paintcontract.com or through your account settings. We will respond within 30 days (45 days for complex requests).</p>
+            </div>
+
+            <div id="cookies" class="section">
+                <h2>8. Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar technologies to enhance your experience:</p>
+
+                <h3>Types of Cookies:</h3>
+
+                <h4>Essential Cookies (Required):</h4>
+                <ul>
+                    <li>Session management and authentication</li>
+                    <li>Security and fraud prevention</li>
+                    <li>Load balancing and performance</li>
+                </ul>
+
+                <h4>Functional Cookies:</h4>
+                <ul>
+                    <li>Language and region preferences</li>
+                    <li>User interface customization</li>
+                    <li>Feature preferences</li>
+                </ul>
+
+                <h4>Analytics Cookies:</h4>
+                <ul>
+                    <li>Google Analytics (usage statistics)</li>
+                    <li>Performance monitoring</li>
+                    <li>Error tracking (Sentry)</li>
+                </ul>
+
+                <h4>Marketing Cookies (With Consent):</h4>
+                <ul>
+                    <li>Advertising campaign tracking</li>
+                    <li>Retargeting and personalization</li>
+                    <li>Social media integration</li>
+                </ul>
+
+                <h3>Managing Cookies:</h3>
+                <p>You can control cookies through:</p>
+                <ul>
+                    <li><strong>Browser Settings:</strong> Block or delete cookies in your browser</li>
+                    <li><strong>Cookie Banner:</strong> Manage preferences through our cookie consent banner</li>
+                    <li><strong>Opt-Out Tools:</strong> Use industry opt-out tools (NAI, DAA)</li>
+                </ul>
+
+                <p><strong>Note:</strong> Disabling essential cookies may limit platform functionality.</p>
+            </div>
+
+            <div id="mobile-apps" class="section">
+                <h2>9. Mobile Applications</h2>
+                <p>Our iOS and Android applications collect additional information:</p>
+
+                <h3>9.1 App Permissions</h3>
+                <p>Our apps request the following permissions:</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Permission</th>
+                            <th>Purpose</th>
+                            <th>Required?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Camera</td>
+                            <td>Portfolio photos, video KYC verification</td>
+                            <td>Yes (for KYC)</td>
+                        </tr>
+                        <tr>
+                            <td>Photo Library</td>
+                            <td>Upload existing portfolio images</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td>Find nearby projects/Workers, location-based matching</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>Notifications</td>
+                            <td>Messages, milestone updates, payment alerts</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>Microphone</td>
+                            <td>Video verification audio</td>
+                            <td>Yes (for video KYC)</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>Cache data, offline functionality</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>9.2 Mobile Analytics</h3>
+                <ul>
+                    <li>App crashes and errors (Sentry, Firebase Crashlytics)</li>
+                    <li>Feature usage and navigation patterns</li>
+                    <li>Device and OS information</li>
+                    <li>App performance metrics</li>
+                </ul>
+
+                <h3>9.3 Push Notifications</h3>
+                <p>We send push notifications for:</p>
+                <ul>
+                    <li>New messages and chat updates</li>
+                    <li>Project milestones and payments</li>
+                    <li>Security alerts</li>
+                    <li>Platform updates</li>
+                    <li>Marketing (with consent)</li>
+                </ul>
+                <p>You can manage notification preferences in your device settings or app settings.</p>
+
+                <h3>9.4 App-Specific Data</h3>
+                <ul>
+                    <li><strong>Device Identifiers:</strong> IDFA (iOS), Advertising ID (Android)</li>
+                    <li><strong>App Version:</strong> For compatibility and support</li>
+                    <li><strong>Installation Source:</strong> App Store vs. direct download</li>
+                </ul>
+            </div>
+
+            <div id="international" class="section">
+                <h2>10. International Data Transfers</h2>
+                <p>PaintContract is based in the United States. If you access our Service from outside the U.S., your information will be transferred to and processed in the United States.</p>
+
+                <h3>10.1 Legal Basis for Transfers</h3>
+                <p>We rely on the following mechanisms for international transfers:</p>
+                <ul>
+                    <li><strong>Consent:</strong> Your explicit consent to transfer data</li>
+                    <li><strong>Contractual Necessity:</strong> Transfer necessary to perform our contract with you</li>
+                    <li><strong>Standard Contractual Clauses:</strong> EU-approved data transfer agreements</li>
+                    <li><strong>Adequacy Decisions:</strong> Transfers to countries with adequate data protection (where applicable)</li>
+                </ul>
+
+                <h3>10.2 Data Protection Standards</h3>
+                <p>We ensure that all international transfers maintain appropriate data protection safeguards equivalent to those required by GDPR and other applicable laws.</p>
+
+                <h3>10.3 Third-Country Transfers</h3>
+                <p>Some service providers may store or process data outside the U.S. We ensure these providers maintain adequate protection through:</p>
+                <ul>
+                    <li>Privacy Shield certification (where applicable)</li>
+                    <li>Standard Contractual Clauses</li>
+                    <li>Binding Corporate Rules</li>
+                    <li>Adequacy decisions</li>
+                </ul>
+            </div>
+
+            <div id="children" class="section">
+                <h2>11. Children's Privacy</h2>
+                <p>PaintContract is not intended for users under 18 years of age. We do not knowingly collect personal information from children under 18.</p>
+                <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at privacy@paintcontract.com. We will delete such information from our systems.</p>
+                <p>If we become aware that we have collected information from a child under 18 without parental consent, we will take steps to delete that information promptly.</p>
+            </div>
+
+            <div id="california" class="section">
+                <h2>12. California Privacy Rights (CCPA)</h2>
+                <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
+
+                <h3>12.1 Right to Know</h3>
+                <p>You have the right to request:</p>
+                <ul>
+                    <li>Categories of personal information collected</li>
+                    <li>Specific pieces of personal information we hold</li>
+                    <li>Categories of sources from which information was collected</li>
+                    <li>Business purposes for collecting or selling information</li>
+                    <li>Categories of third parties with whom we share information</li>
+                </ul>
+
+                <h3>12.2 Right to Delete</h3>
+                <p>You can request deletion of your personal information, subject to certain exceptions (legal obligations, fraud prevention, security, etc.).</p>
+
+                <h3>12.3 Right to Opt-Out</h3>
+                <p><strong>We do not sell your personal information.</strong> If this changes, we will provide a clear "Do Not Sell My Personal Information" link and honor opt-out requests.</p>
+
+                <h3>12.4 Right to Non-Discrimination</h3>
+                <p>We will not discriminate against you for exercising your CCPA rights. You will not receive different prices, rates, or quality of service.</p>
+
+                <h3>12.5 Authorized Agent</h3>
+                <p>You may designate an authorized agent to submit requests on your behalf. The agent must provide proof of authorization.</p>
+
+                <h3>12.6 Verification</h3>
+                <p>To protect your privacy, we verify your identity before processing requests. This may require:</p>
+                <ul>
+                    <li>Matching information you provide with information in our records</li>
+                    <li>Requiring account login</li>
+                    <li>Additional verification for sensitive requests</li>
+                </ul>
+
+                <h3>12.7 California "Shine the Light" Law</h3>
+                <p>California residents may request information about our disclosure of personal information to third parties for direct marketing purposes. Contact privacy@paintcontract.com for such requests.</p>
+            </div>
+
+            <div id="gdpr" class="section">
+                <h2>13. European Privacy Rights (GDPR)</h2>
+                <p>If you are in the European Economic Area (EEA), UK, or Switzerland, you have rights under the General Data Protection Regulation (GDPR):</p>
+
+                <h3>13.1 Legal Basis for Processing</h3>
+                <p>We process your data based on:</p>
+                <ul>
+                    <li><strong>Contractual Necessity:</strong> To perform our contract with you (account services, payments, etc.)</li>
+                    <li><strong>Legitimate Interests:</strong> Fraud prevention, security, platform improvement</li>
+                    <li><strong>Legal Obligations:</strong> KYC/AML compliance, tax reporting</li>
+                    <li><strong>Consent:</strong> Marketing communications, optional features</li>
+                </ul>
+
+                <h3>13.2 Your Rights Under GDPR</h3>
+                <ul>
+                    <li><strong>Right of Access:</strong> Obtain confirmation and copy of your data</li>
+                    <li><strong>Right to Rectification:</strong> Correct inaccurate data</li>
+                    <li><strong>Right to Erasure:</strong> Request deletion ("right to be forgotten")</li>
+                    <li><strong>Right to Restrict Processing:</strong> Limit how we use your data</li>
+                    <li><strong>Right to Data Portability:</strong> Receive data in portable format</li>
+                    <li><strong>Right to Object:</strong> Object to processing based on legitimate interests</li>
+                    <li><strong>Rights Related to Automated Decision-Making:</strong> Object to solely automated decisions</li>
+                </ul>
+
+                <h3>13.3 Data Protection Officer</h3>
+                <p>For GDPR-related inquiries, contact our Data Protection Officer:</p>
+                <p>Email: dpo@paintcontract.com</p>
+
+                <h3>13.4 Supervisory Authority</h3>
+                <p>You have the right to lodge a complaint with your local data protection authority if you believe we have violated your privacy rights.</p>
+
+                <h3>13.5 Automated Decision-Making</h3>
+                <p>We use automated systems for:</p>
+                <ul>
+                    <li>Trust scoring and fraud detection</li>
+                    <li>Project matching recommendations</li>
+                    <li>Risk assessment</li>
+                </ul>
+                <p>You have the right to request human review of automated decisions that significantly affect you.</p>
+            </div>
+
+            <div id="changes" class="section">
+                <h2>14. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in:</p>
+                <ul>
+                    <li>Our data practices</li>
+                    <li>Legal requirements</li>
+                    <li>Platform features and services</li>
+                    <li>Technology and security measures</li>
+                </ul>
+
+                <h3>Notice of Changes:</h3>
+                <p>When we make material changes, we will:</p>
+                <ul>
+                    <li>Update the "Last Updated" date at the top</li>
+                    <li>Notify you via email to your registered address</li>
+                    <li>Display a prominent notice on our platform</li>
+                    <li>For significant changes, request your consent</li>
+                </ul>
+
+                <h3>Effective Date:</h3>
+                <p>Changes become effective 30 days after notice for material changes, or immediately for non-material updates or legal requirements.</p>
+
+                <h3>Review Policy:</h3>
+                <p>We encourage you to review this policy periodically. Continued use after changes constitutes acceptance, unless consent is explicitly required.</p>
+            </div>
+
+            <div id="contact" class="section">
+                <h2>15. Contact Us</h2>
+                <div class="contact-info">
+                    <h3>PaintContract, Inc.</h3>
+                    <p><strong>Privacy Inquiries:</strong> privacy@paintcontract.com</p>
+                    <p><strong>Data Protection Officer (DPO):</strong> dpo@paintcontract.com</p>
+                    <p><strong>CCPA Requests:</strong> ccpa@paintcontract.com</p>
+                    <p><strong>GDPR Requests:</strong> gdpr@paintcontract.com</p>
+                    <p><strong>General Support:</strong> support@paintcontract.com</p>
+                    
+                    <p style="margin-top: 1.5rem;"><strong>Mailing Address:</strong><br>
+                    PaintContract, Inc.<br>
+                    Attn: Privacy Department<br>
+                    [Street Address]<br>
+                    [City, State ZIP]<br>
+                    United States</p>
+
+                    <p style="margin-top: 1.5rem;"><strong>Response Time:</strong> We respond to privacy requests within 30 days (45 days for complex requests).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PaintContract, Inc. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="privacy.html" style="color: var(--primary-teal); text-decoration: none;">Privacy Policy</a> | 
+            <a href="terms.html" style="color: var(--primary-teal); text-decoration: none;">Terms of Service</a> | 
+            <a href="index.html" style="color: var(--primary-teal); text-decoration: none;">Home</a>
+        </p>
+    </footer>
+</body>
+</html>
