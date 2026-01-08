@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaintContract - Global Marketplace Connecting Painters & Construction Workers with Companies</title>
+    <meta name="description" content="The premier platform connecting professional painters and construction workers with companies worldwide. Find projects, showcase your portfolio, and build your career.">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QKEJCQ9Y0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5QKEJCQ9Y0'); // Replace with your actual GA4 ID
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-teal: #14b8a6;
+            --primary-dark: #0d9488;
+            --secondary-slate: #475569;
+            --accent-coral: #fb7185;
+            --accent-orange: #fb923c;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-gray: #f8fafc;
+            --bg-light: #f1f5f9;
+            --white: #ffffff;
+            --success-green: #10b981;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary-teal);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--accent-coral);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-teal);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-teal) 100%);
+            color: var(--white);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('hero-bg.jpg') center/cover;
+            opacity: 0.25;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--accent-coral);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: #f43f5e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(251, 113, 133, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-teal);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--bg-light);
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(20, 184, 166, 0.15);
+            border-color: var(--primary-teal);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Two Column Sections */
+        .two-column {
+            padding: 80px 0;
+        }
+        
+        .two-column-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .column-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .column-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .column-text h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .column-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .column-text ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .column-text li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-light);
+        }
+        
+        .column-text li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-coral);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .bg-gray {
+            background: var(--bg-light);
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-coral);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .step h3 {
+            font-size: 1.3rem;
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+        
+        .step p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+        }
+        
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--accent-coral);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-form button:hover {
+            background: #f43f5e;
+            transform: translateY(-2px);
+        }
+        
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(34, 197, 94, 0.5);
+            color: #fff;
+        }
+        
+        .form-message.error {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            color: #fff;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-coral);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-coral);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .two-column-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .column-reverse {
+                direction: rtl;
+            }
+            
+            .column-reverse > * {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Paint<span>Contract</span></a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#for-workers">For Workers</a></li>
+                <li><a href="#for-companies">For Companies</a></li>
+                <li><a href="#signup">Get Notified</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Connect With Your Next Project</h1>
+            <p>The global marketplace connecting professional painters and construction workers with companies worldwide. Build your career, showcase your portfolio, and join a community of skilled professionals.</p>
+            <div class="cta-buttons">
+                <a href="#signup" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Hero Worker Signup'});">I'm a Worker</a>
+                <a href="#signup" class="btn btn-secondary" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Hero Company Signup'});">I'm Hiring</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Succeed</h2>
+                <p>A complete platform designed for the painting and construction industry</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Project Matching</h3>
+                    <p>Smart matching system connects skilled workers with companies based on experience, location, specialization, and project requirements. Find the perfect fit for your career goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Professional Portfolios</h3>
+                    <p>Build a comprehensive profile showcasing your completed projects, certifications, specializations, and client reviews. Stand out with visual proof of your expertise.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Secure Payments</h3>
+                    <p>Milestone-based payment system with escrow protection. Get paid securely for completed work through multiple payment methods including crypto and traditional payments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Verified Companies</h3>
+                    <p>Browse verified company profiles with detailed project histories, payment reliability ratings, and worker reviews to make informed career decisions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>KYC & Trust System</h3>
+                    <p>Advanced identity verification and trust scoring system ensures legitimate connections. Work with confidence knowing both parties are verified professionals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global Opportunities</h3>
+                    <p>Access projects worldwide with multilingual support and international payment options. Expand your business beyond local markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Workers Section -->
+    <section id="for-workers" class="two-column bg-gray">
+        <div class="container">
+            <div class="two-column-content">
+                <div class="column-image">
+                    <img src="img1.jpeg" alt="Professional painter at work">
+                </div>
+                <div class="column-text">
+                    <h2>For Painters & Construction Workers</h2>
+                    <p>Take control of your career with PaintContract. Whether you're a seasoned professional or building your reputation, our platform connects you with quality projects that match your skills.</p>
+                    <ul>
+                        <li>Create a professional portfolio with project photos and certifications</li>
+                        <li>Get matched with companies actively seeking your specific skills</li>
+                        <li>Set your own rates and negotiate project terms directly</li>
+                        <li>Secure milestone-based payments with escrow protection</li>
+                        <li>Build your reputation with verified client reviews</li>
+                        <li>Access training resources and industry certifications</li>
+                        <li>Work locally or expand to international markets</li>
+                    </ul>
+                    <a href="#signup" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Worker Section Signup'});">Get Started as a Worker</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Companies Section -->
+    <section id="for-companies" class="two-column">
+        <div class="container">
+            <div class="two-column-content">
+                <div class="column-text">
+                    <h2>For Companies & Contractors</h2>
+                    <p>Find qualified, professional painters and construction workers faster with PaintContract. Our platform connects you with verified, skilled workers ready to deliver quality results.</p>
+                    <ul>
+                        <li>Post detailed project requirements with budget and timeline</li>
+                        <li>Browse portfolios of verified, skilled workers globally</li>
+                        <li>Review ratings, certifications, and completed project galleries</li>
+                        <li>Manage multiple projects with milestone tracking</li>
+                        <li>Secure payments with automatic milestone releases</li>
+                        <li>Direct messaging and file sharing for clear communication</li>
+                        <li>Build long-term relationships with reliable workers</li>
+                    </ul>
+                    <a href="#signup" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Company Section Signup'});">Start Hiring Workers</a>
+                </div>
+                <div class="column-image">
+                    <img src="img2.jpeg" alt="Construction project manager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How PaintContract Works</h2>
+                <p>Simple, secure, and effective project matching</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Your Profile</h3>
+                    <p>Workers create portfolios with project photos and certifications. Companies post detailed project requirements with budgets and timelines.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Get Verified</h3>
+                    <p>Complete KYC verification with document and video verification. Build trust with our comprehensive identity and skill validation system.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Connect & Negotiate</h3>
+                    <p>Browse projects or workers, send proposals, and negotiate terms directly. Discuss project details, timelines, and milestones before committing.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Work & Get Paid</h3>
+                    <p>Complete projects with milestone tracking. Release payments automatically upon milestone approval. Rate and review for future opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter/Signup Section -->
+    <section id="signup" class="newsletter">
+        <div class="container newsletter-content">
+            <h2>Be the First to Know</h2>
+            <p>PaintContract is launching soon! Join our waitlist to get early access and be notified when we're ready to help you find your next opportunity. We'll send you an email when the platform is live.</p>
+            <form class="newsletter-form" id="signupForm">
+                <input type="email" id="emailInput" placeholder="Enter your email address" required>
+                <button type="submit" onclick="gtag('event', 'submit', {'event_category': 'Form', 'event_label': 'Waitlist Signup'});">Join Waitlist</button>
+            </form>
+            <div class="form-message" id="formMessage"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PaintContract</h3>
+                    <p>Connecting professional painters and construction workers with companies worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>For Workers</h3>
+                    <ul>
+                        <li><a href="#features">Create Portfolio</a></li>
+                        <li><a href="#for-workers">Find Projects</a></li>
+                        <li><a href="#features">Certifications</a></li>
+                        <li><a href="#features">Worker Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>For Companies</h3>
+                    <ul>
+                        <li><a href="#for-companies">Post Projects</a></li>
+                        <li><a href="#for-companies">Find Workers</a></li>
+                        <li><a href="#features">Company Profiles</a></li>
+                        <li><a href="#features">Payment Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#features">Training</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PaintContract. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase Integration Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Initialize Supabase
+        const SUPABASE_URL = 'https://xhswiizneqphltobsxkw.supabase.co'; // Replace with your Supabase URL
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhoc3dpaXpuZXFwaGx0b2JzeGt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxNzI5NTEsImV4cCI6MjA3Mjc0ODk1MX0.HiZZ1RTSqOf0dbc9xBbmWGaaEKaI1bM3GtCxOcdMABI'; // Replace with your Supabase anon key
+        
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+            auth: {
+                autoRefreshToken: false,
+                persistSession: false
+            }
+        });
+        
+        // Handle form submission
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('emailInput').value.toLowerCase().trim();
+            const messageDiv = document.getElementById('formMessage');
+            const submitButton = this.querySelector('button');
+            
+            // Disable button and show loading
+            submitButton.disabled = true;
+            submitButton.textContent = 'Joining...';
+            messageDiv.style.display = 'none';
+            
+            try {
+                // Track event in Google Analytics
+                gtag('event', 'signup', {
+                    'event_category': 'Form',
+                    'event_label': 'Waitlist Email Submission',
+                    'value': email
+                });
+                
+                // Insert into Supabase
+                const { data, error } = await supabase
+                    .from('paintcontract_waitlist')
+                    .insert([
+                        { 
+                            email: email,
+                            source: 'landing_page'
+                        }
+                    ])
+                    .select();
+                
+                if (error) {
+                    console.error('Supabase error:', error);
+                    
+                    // Check if it's a duplicate entry
+                    if (error.code === '23505' || error.message.includes('duplicate') || error.message.includes('unique')) {
+                        messageDiv.className = 'form-message success';
+                        messageDiv.textContent = "You're already on our waitlist! We'll notify you when we launch.";
+                        document.getElementById('emailInput').value = '';
+                    } else if (error.code === '42501' || error.message.includes('row-level security')) {
+                        // RLS policy issue - show user-friendly message
+                        messageDiv.className = 'form-message error';
+                        messageDiv.textContent = 'Database configuration error. Please contact support at support@paintcontract.com';
+                        
+                        // Track RLS error for debugging
+                        gtag('event', 'exception', {
+                            'description': 'RLS Policy Error: ' + error.message,
+                            'fatal': false
+                        });
+                    } else {
+                        throw error;
+                    }
+                } else {
+                    messageDiv.className = 'form-message success';
+                    messageDiv.textContent = "Success! We'll email you when PaintContract is ready to launch.";
+                    document.getElementById('emailInput').value = '';
+                    
+                    // Track successful signup
+                    gtag('event', 'conversion', {
+                        'send_to': 'G-5QKEJCQ9Y0/waitlist_signup',
+                        'event_category': 'Conversion',
+                        'event_label': 'Waitlist Signup Success'
+                    });
+                }
+                
+                messageDiv.style.display = 'block';
+                
+            } catch (error) {
+                console.error('Error:', error);
+                messageDiv.className = 'form-message error';
+                messageDiv.textContent = 'Something went wrong. Please try again or contact support.';
+                messageDiv.style.display = 'block';
+                
+                // Track error with full details
+                gtag('event', 'exception', {
+                    'description': 'Waitlist signup error: ' + (error.message || error.code || 'Unknown error'),
+                    'fatal': false
+                });
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Join Waitlist';
+            }
+        });
+        
+        // Track page view
+        gtag('event', 'page_view', {
+            'page_title': 'PaintContract Landing Page',
+            'page_location': window.location.href
+        });
+        
+        // Track scroll depth
+        let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            
+            Object.keys(scrollTracked).forEach(depth => {
+                if (scrollPercent >= depth && !scrollTracked[depth]) {
+                    scrollTracked[depth] = true;
+                    gtag('event', 'scroll', {
+                        'event_category': 'Engagement',
+                        'event_label': 'Scroll Depth ' + depth + '%',
+                        'value': parseInt(depth)
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
